@@ -24,8 +24,12 @@ class GraphQLController {
 
     private static final String MEDIA_TYPE_APPLICATION_GRAPHQL = "application/graphql";
 
+    private final GraphQL graphQL;
+
     @Autowired
-    private GraphQL graphQl;
+    public GraphQLController(GraphQL graphQL) {
+        this.graphQL = graphQL;
+    }
 
     @GetMapping
     public Map<String, Object> get(@RequestParam("query") String query) {
@@ -50,7 +54,7 @@ class GraphQLController {
     }
 
     private Map<String, Object> executeQuery(String query) {
-        return graphQl
+        return graphQL
                 .execute((ExecutionInput
                         .newExecutionInput(query)
                         .build()))
