@@ -64,7 +64,7 @@ class GraphQLController {
     @Data
     @NoArgsConstructor
     @AllArgsConstructor
-    private static class GraphRequest {
+    static class GraphRequest {
         private String query;
     }
 }
