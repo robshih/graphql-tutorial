@@ -1,4 +1,4 @@
-FROM openjdk:11
+FROM adoptopenjdk/openjdk11:jdk-11.0.7_10-alpine
 
 ENV APP_HOME="/graphql-tutorial/app"
 
