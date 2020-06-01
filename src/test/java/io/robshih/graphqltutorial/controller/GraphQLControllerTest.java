@@ -5,7 +5,6 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-import com.google.gson.Gson;
 import graphql.ExecutionInput;
 import graphql.ExecutionResult;
 import graphql.GraphQL;
@@ -62,13 +61,6 @@ class GraphQLControllerTest {
     @Nested
     @DisplayName("POST unit tests")
     class PostQueries {
-
-        private Gson gson;
-
-        @BeforeEach
-        void setup() {
-            gson = new Gson();
-        }
 
         @DisplayName("Execute graph query using query string from json structure")
         @UnitTest
