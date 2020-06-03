@@ -17,6 +17,7 @@
 
     <modules>
         <module>graphql-tutorial-service</module>
+        <module>graphql-tutorial-service-tests</module>
     </modules>
 
     <properties>
