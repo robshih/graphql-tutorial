@@ -4,7 +4,7 @@ ENV APP_HOME="/graphql-tutorial/app"
 
 WORKDIR $APP_HOME
 
-# TODO implement proper versioning
+# TODO implement proper versioning ie. remove snapshot versions
 COPY target/graphql-tutorial-service-0.0.1-SNAPSHOT.jar .
 
 EXPOSE 8080

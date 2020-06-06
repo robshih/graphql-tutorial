@@ -23,17 +23,24 @@
     <properties>
         <java.version>11</java.version>
 
+        <!-- Dependencies -->
         <spring-boot.version>2.2.6.RELEASE</spring-boot.version>
         <graphql.version>14.0</graphql.version>
         <guava.version>28.2-jre</guava.version>
         <gson.version>2.8.6</gson.version>
         <lombok.version>1.18.12</lombok.version>
 
+        <!-- Test -->
         <junit.version>5.6.2</junit.version>
         <mockito.version>3.3.3</mockito.version>
 
+        <!-- Build -->
         <maven.surefire.version>3.0.0-M4</maven.surefire.version>
         <maven.failsafe.version>3.0.0-M4</maven.failsafe.version>
+        <fabric8.version>4.4.1</fabric8.version>
+
+        <!-- Docker -->
+        <dockerhub.repo.name>robshih</dockerhub.repo.name>
     </properties>
 
     <dependencyManagement>
@@ -91,6 +98,11 @@
                     <groupId>org.apache.maven.plugins</groupId>
                     <artifactId>maven-failsafe-plugin</artifactId>
                     <version>${maven.failsafe.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>io.fabric8</groupId>
+                    <artifactId>fabric8-maven-plugin</artifactId>
+                    <version>${fabric8.version}</version>
                 </plugin>
             </plugins>
         </pluginManagement>
