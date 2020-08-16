@@ -1,7 +1,5 @@
 package io.robshih.graphqltutorial.cucumber.steps;
 
-import static org.junit.Assert.assertEquals;
-
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -23,7 +21,7 @@ public class StepDefinitions {
 
     @When("I make a {word} request")
     public void iMakeARequest(String requestType) {
-         scenarioContext.setResponse(RestAssured.get(GRAPH_ENDPOINT));
+        scenarioContext.setResponse(RestAssured.get(GRAPH_ENDPOINT));
     }
 
     @Then("I should receive a success response")
